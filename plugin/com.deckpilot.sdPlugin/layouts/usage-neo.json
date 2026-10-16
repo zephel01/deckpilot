@@ -1,0 +1,11 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/layout.json",
+	"id": "deckpilot-usage-neo",
+	"controller": "Neo",
+	"items": [
+		{ "key": "label", "type": "text", "rect": [6, 2, 96, 18], "alignment": "left", "color": "#9aa3ad", "font": { "size": 12, "weight": 600 }, "value": "" },
+		{ "key": "value", "type": "text", "rect": [6, 20, 96, 28], "alignment": "left", "font": { "size": 20, "weight": 700 }, "value": "--" },
+		{ "key": "bar", "type": "bar", "rect": [108, 8, 118, 8], "subtype": 0, "border_w": 0, "bar_bg_c": "#3a3f46", "bar_fill_c": "#3ecf8e", "value": 0, "range": { "min": 0, "max": 100 } },
+		{ "key": "sub", "type": "text", "rect": [108, 22, 118, 24], "alignment": "left", "color": "#9aa3ad", "font": { "size": 12, "weight": 500 }, "value": "" }
+	]
+}

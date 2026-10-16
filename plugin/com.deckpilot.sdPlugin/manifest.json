@@ -1,0 +1,124 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+	"Name": "Deckpilot",
+	"Version": "0.1.0.0",
+	"Author": "Deckpilot",
+	"Description": "Claude Code / Codex / local LLM control and usage meters, fed by the local agent-meter daemon (no cloud calls).",
+	"UUID": "com.deckpilot",
+	"Icon": "imgs/plugin",
+	"CategoryIcon": "imgs/category",
+	"Category": "Deckpilot",
+	"CodePath": "bin/plugin.js",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "7.6"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		}
+	],
+	"Nodejs": {
+		"Version": "20"
+	},
+	"Actions": [
+		{
+			"UUID": "com.deckpilot.permission",
+			"Name": "Permission (Allow / Deny / Always)",
+			"Tooltip": "Answers the oldest Claude Code permission request",
+			"Icon": "imgs/action",
+			"Controllers": [
+				"Keypad"
+			],
+			"PropertyInspectorPath": "ui/permission.html",
+			"States": [
+				{
+					"Image": "imgs/key",
+					"ShowTitle": false
+				}
+			]
+		},
+		{
+			"UUID": "com.deckpilot.session",
+			"Name": "Session Status",
+			"Tooltip": "Working / waiting Claude Code sessions. Press to focus the terminal",
+			"Icon": "imgs/action",
+			"Controllers": [
+				"Keypad"
+			],
+			"PropertyInspectorPath": "ui/session.html",
+			"States": [
+				{
+					"Image": "imgs/key",
+					"ShowTitle": false
+				}
+			]
+		},
+		{
+			"UUID": "com.deckpilot.usage",
+			"Name": "Usage Meter",
+			"Tooltip": "Claude / Codex / local LLM usage. Rotate or tap to switch source",
+			"Icon": "imgs/action",
+			"Controllers": [
+				"Keypad",
+				"Encoder",
+				"Neo"
+			],
+			"PropertyInspectorPath": "ui/usage.html",
+			"Encoder": {
+				"layout": "layouts/usage-dial.json",
+				"TriggerDescription": {
+					"Rotate": "Switch source",
+					"Push": "Refresh",
+					"Touch": "Next source"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/key",
+					"ShowTitle": false
+				}
+			]
+		},
+		{
+			"UUID": "com.deckpilot.keys",
+			"Name": "Send Keys",
+			"Tooltip": "Activate an app and send keys / text, e.g. /compact{enter}",
+			"Icon": "imgs/action",
+			"Controllers": [
+				"Keypad"
+			],
+			"PropertyInspectorPath": "ui/keys.html",
+			"States": [
+				{
+					"Image": "imgs/key",
+					"ShowTitle": false
+				}
+			]
+		},
+		{
+			"UUID": "com.deckpilot.dialkeys",
+			"Name": "Dial Keys",
+			"Tooltip": "Rotate left/right and push send key sequences (mode cycle, history, scroll)",
+			"Icon": "imgs/action",
+			"Controllers": [
+				"Encoder"
+			],
+			"PropertyInspectorPath": "ui/dialkeys.html",
+			"Encoder": {
+				"layout": "$A1",
+				"TriggerDescription": {
+					"Rotate": "Left / right keys",
+					"Push": "Push keys",
+					"Touch": "Push keys"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/key"
+				}
+			]
+		}
+	]
+}

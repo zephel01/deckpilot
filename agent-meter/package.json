@@ -1,0 +1,23 @@
+{
+	"name": "agent-meter",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Local-only usage/status daemon for Claude Code, Codex and local LLMs, feeding a Stream Deck plugin",
+	"type": "module",
+	"engines": { "node": ">=22.18" },
+	"bin": {
+		"agent-meter": "dist/agent-meter.js",
+		"agent-meter-hook": "dist/agent-meter-hook.js"
+	},
+	"scripts": {
+		"build": "esbuild src/main.ts --bundle --platform=node --format=esm --target=node20 --outfile=dist/agent-meter.js && esbuild src/hook-cli.ts --bundle --platform=node --format=esm --target=node20 --outfile=dist/agent-meter-hook.js",
+		"typecheck": "tsc --noEmit",
+		"test": "node --test test/*.test.ts",
+		"start": "node dist/agent-meter.js"
+	},
+	"devDependencies": {
+		"@types/node": "^22.0.0",
+		"esbuild": "^0.25.0",
+		"typescript": "^5.6.0"
+	}
+}

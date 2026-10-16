@@ -1,0 +1,5 @@
+node_modules/
+agent-meter/dist/
+plugin/dist/
+plugin/com.deckpilot.sdPlugin/bin/
+plugin/com.deckpilot.sdPlugin/logs/

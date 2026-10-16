@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+<body>
+	<sdpi-item label="Answer">
+		<sdpi-select setting="behavior" default="allow">
+			<option value="allow">Allow (once)</option>
+			<option value="deny">Deny</option>
+			<option value="always">Always allow (Claude Code's suggested rule)</option>
+		</sdpi-select>
+	</sdpi-item>
+	<p style="padding:0 12px;color:#999;font-size:11px">Answers the oldest pending request. If no key is pressed within the daemon's wait time, Claude Code shows its normal dialog.</p>
+</body>
+</html>
