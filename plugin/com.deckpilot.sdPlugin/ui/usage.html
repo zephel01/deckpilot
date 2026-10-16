@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+<body>
+	<sdpi-item label="Source">
+		<sdpi-select setting="source" default="claude-5h">
+			<option value="claude-5h">Claude 5h block (estimate)</option>
+			<option value="claude-today">Claude today (tokens)</option>
+			<option value="claude-week">Claude 7 days (tokens)</option>
+			<option value="codex-5h">Codex 5h limit (%)</option>
+			<option value="codex-week">Codex weekly limit (%)</option>
+			<option value="codex-today">Codex today (tokens)</option>
+			<option value="local">Local LLM (tok/s)</option>
+		</sdpi-select>
+	</sdpi-item>
+	<p style="padding:0 12px;color:#999;font-size:11px">"~" means the % is relative to your largest past 5h block. Set claudeBlockTokenLimit in ~/.agent-meter/config.json for a fixed budget.</p>
+</body>
+</html>

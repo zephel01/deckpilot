@@ -1,0 +1,10 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/layout.json",
+	"id": "deckpilot-usage-dial",
+	"items": [
+		{ "key": "label", "type": "text", "rect": [12, 4, 176, 22], "alignment": "left", "color": "#9aa3ad", "font": { "size": 15, "weight": 600 }, "value": "" },
+		{ "key": "value", "type": "text", "rect": [12, 28, 176, 38], "alignment": "left", "font": { "size": 30, "weight": 700 }, "value": "--" },
+		{ "key": "bar", "type": "bar", "rect": [12, 70, 176, 8], "subtype": 0, "border_w": 0, "bar_bg_c": "#3a3f46", "bar_fill_c": "#3ecf8e", "value": 0, "range": { "min": 0, "max": 100 } },
+		{ "key": "sub", "type": "text", "rect": [12, 80, 176, 18], "alignment": "left", "color": "#9aa3ad", "font": { "size": 13, "weight": 500 }, "value": "" }
+	]
+}

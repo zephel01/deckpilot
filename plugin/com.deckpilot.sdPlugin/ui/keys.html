@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+<body>
+	<sdpi-item label="Label">
+		<sdpi-textfield setting="label" placeholder="/compact"></sdpi-textfield>
+	</sdpi-item>
+	<sdpi-item label="Target app">
+		<sdpi-textfield setting="app" placeholder="Terminal / iTerm / Ghostty / ptygrid (empty = frontmost)"></sdpi-textfield>
+	</sdpi-item>
+	<sdpi-item label="Sequence">
+		<sdpi-textfield setting="sequence" placeholder="/compact{enter}"></sdpi-textfield>
+	</sdpi-item>
+	<p style="padding:0 12px;color:#999;font-size:11px">Text plus {esc} {enter} {tab} {up} {down} {shift+tab} {cmd+k} {wait:200}. Non-ASCII text is pasted via the clipboard.</p>
+</body>
+</html>

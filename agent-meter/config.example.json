@@ -1,0 +1,12 @@
+{
+	"port": 47823,
+	"claudeDirs": ["~/.claude"],
+	"codexDir": "~/.codex",
+	"local": [
+		{ "name": "llama", "kind": "llama", "url": "http://127.0.0.1:8080/metrics" },
+		{ "name": "ollama", "kind": "ollama", "url": "http://127.0.0.1:11434/api/ps" }
+	],
+	"permissionWaitSec": 30,
+	"scanIntervalSec": 15,
+	"localIntervalSec": 3
+}

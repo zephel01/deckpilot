@@ -1,0 +1,25 @@
+{
+	"hooks": {
+		"PermissionRequest": [
+			{ "hooks": [{ "type": "command", "command": "node \"$HOME/.agent-meter/agent-meter-hook.js\"", "timeout": 45 }] }
+		],
+		"SessionStart": [
+			{ "hooks": [{ "type": "command", "command": "node \"$HOME/.agent-meter/agent-meter-hook.js\"", "async": true }] }
+		],
+		"UserPromptSubmit": [
+			{ "hooks": [{ "type": "command", "command": "node \"$HOME/.agent-meter/agent-meter-hook.js\"", "async": true }] }
+		],
+		"PreToolUse": [
+			{ "hooks": [{ "type": "command", "command": "node \"$HOME/.agent-meter/agent-meter-hook.js\"", "async": true }] }
+		],
+		"Notification": [
+			{ "hooks": [{ "type": "command", "command": "node \"$HOME/.agent-meter/agent-meter-hook.js\"", "async": true }] }
+		],
+		"Stop": [
+			{ "hooks": [{ "type": "command", "command": "node \"$HOME/.agent-meter/agent-meter-hook.js\"", "async": true }] }
+		],
+		"SessionEnd": [
+			{ "hooks": [{ "type": "command", "command": "node \"$HOME/.agent-meter/agent-meter-hook.js\"", "async": true }] }
+		]
+	}
+}

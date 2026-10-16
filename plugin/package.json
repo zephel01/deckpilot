@@ -1,0 +1,22 @@
+{
+	"name": "deckpilot-plugin",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "esbuild src/plugin.ts --bundle --platform=node --format=esm --target=node20 --banner:js=\"import { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);\" --outfile=com.deckpilot.sdPlugin/bin/plugin.js && node -e \"require('fs').writeFileSync('com.deckpilot.sdPlugin/bin/package.json', JSON.stringify({type:'module'}))\"",
+		"typecheck": "tsc --noEmit",
+		"test": "node --test test/*.test.ts",
+		"validate": "streamdeck validate com.deckpilot.sdPlugin",
+		"pack": "streamdeck pack com.deckpilot.sdPlugin -f -o dist"
+	},
+	"dependencies": {
+		"@elgato/streamdeck": "3.0.2"
+	},
+	"devDependencies": {
+		"@elgato/cli": "1.10.2",
+		"@types/node": "^22.0.0",
+		"esbuild": "^0.25.0",
+		"typescript": "^5.6.0"
+	}
+}
